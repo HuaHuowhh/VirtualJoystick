@@ -1,0 +1,19 @@
+Mods: {
+	VirtualJoystick: {
+		Configs: {
+			UnlimitedZoomConfig: {
+				DisplayName: Zoom Settings
+
+				SuperZoom: {
+					Label: "{$Mods.UnlimitedZoom.Common.GameZoom}"
+					Tooltip: ""
+				}
+
+				UIZoom: {
+					Label: "{$Mods.UnlimitedZoom.Common.UIZoom}"
+					Tooltip: ""
+				}
+			}
+		}
+	}
+}

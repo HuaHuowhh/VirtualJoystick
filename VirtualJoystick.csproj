@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\tModLoader.targets" />
+  <PropertyGroup>
+    <AssemblyName>VirtualJoystick</AssemblyName>
+    <TargetFramework>net8.0</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="InputSimulatorStandard\**" />
+    <AdditionalFiles Remove="UI\**" />
+    <Compile Remove="InputSimulatorStandard\**" />
+    <Compile Remove="UI\**" />
+    <EmbeddedResource Remove="InputSimulatorStandard\**" />
+    <EmbeddedResource Remove="UI\**" />
+    <None Remove="InputSimulatorStandard\**" />
+    <None Remove="UI\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="move.png" />
+    <AdditionalFiles Remove="resizehorizontal.png" />
+    <AdditionalFiles Remove="resizevertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="InjectUtils.cs" />
+    <Compile Remove="ItemStorageSystem.cs" />
+    <Compile Remove="KeyboardInput.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Dot.png" />
+    <None Remove="Fonts\FSEX302.ttf" />
+    <None Remove="JoyStick.png" />
+    <None Remove="JoystickBackground.png" />
+    <None Remove="JoystickKnob.png" />
+    <None Remove="joystick_arrow.png" />
+    <None Remove="joystick_handle.png" />
+    <None Remove="KeyExample.png" />
+    <None Remove="lib\FNA.dll" />
+    <None Remove="lib\GregsStack.InputSimulatorStandard.dll" />
+    <None Remove="lib\Mono.Android.dll" />
+    <None Remove="lib\ProjectStarlight.Interchange.dll" />
+    <None Remove="MiKey.png" />
+    <None Remove="move.png" />
+    <None Remove="resizehorizontal.png" />
+    <None Remove="resizevertical.png" />
+    <None Remove="VirtualControlArrow.png" />
+    <None Remove="控件.png" />
+    <None Remove="摇杆手柄.png" />
+    <None Remove="摇杆背景.png" />
+    <None Remove="生命药水.png" />
+    <None Remove="背包.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UI\UISystem.cs" />
+    <Compile Include="UI\Joystick.cs" />
+    <Compile Include="UI\VirtualJoystickElement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\Dot.png" />
+    <Content Include="UI\JoystickBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\" />
+    <Folder Include="MiKeys\Content\bin\DesktopGL\1111\" />
+    <Folder Include="MiKeys\Content\obj\DesktopGL\net6.0\1111\" />
+    <Folder Include="MiKeys\Content\obj\DesktopGL\net6.0\Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework.Content.Pipeline">
+      <HintPath>..\..\..\..\..\..\.nuget\packages\ryan.monogame.framework.content.pipeline\3.7.100\lib\netstandard2.0\MonoGame.Framework.Content.Pipeline.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

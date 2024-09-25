@@ -1,0 +1,5 @@
+displayName = VirtualJoystick
+author = »¨»ð
+version = 1.0
+includePDB = true
+includeSource = true
